@@ -21,7 +21,7 @@ typealias BleConnectedBlock = (_ peripheral: CBPeripheral, _ characteristic:CBCh
 class BluetoothLowEnergy: NSObject {
     
     // 提供给其他类进行调用
-    static let shared = BluetoothLowEnergy()
+    // static let shared = BluetoothLowEnergy()
     
     private let BLE_WRITE_UUID = "xxxx"
     private let BLE_NOTIFY_UUID = "xxxx"
@@ -65,7 +65,8 @@ class BluetoothLowEnergy: NSObject {
     }
 
     // 1. 扫描设备
-    func startScanPeripheral(serviceUUIDS: [CBUUID]?, options: [String: AnyObject]?){
+    func startScanPeripheral(serviceUUIDS: [CBUUID]?,
+                             options: [String: AnyObject]?) {
         // 清空列表
         deviceList = []
         
@@ -153,6 +154,8 @@ extension BluetoothLowEnergy: CBCentralManagerDelegate {
     // MARK: 中心管理器扫描到了设备
     func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
         
+        NSLog("\(#function): 中心管理器扫描到了设备 central:\(central),peripheral:\(peripheral)")
+        
         guard !deviceList.contains(peripheral), let deviceName = peripheral.name, deviceName.count > 0 else {
             return
         }
@@ -168,7 +171,7 @@ extension BluetoothLowEnergy: CBCentralManagerDelegate {
        
     // MARK: 连接外设成功，开始发现服务
     func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {
-        NSLog("\(#function)连接外设成功。\ncentral:\(central),peripheral:\(peripheral)\n")
+        NSLog("\(#function): 连接外设成功 central:\(central),peripheral:\(peripheral)")
         
          // 设置代理
          peripheral.delegate = self
@@ -181,7 +184,7 @@ extension BluetoothLowEnergy: CBCentralManagerDelegate {
     // MARK: 连接外设失败
     func centralManager(_ central: CBCentralManager, didFailToConnect peripheral:
                             CBPeripheral, error: Error?) {
-        NSLog("\(#function)连接外设失败\n\(String(describing: peripheral.name))连接失败：\(String(describing: error))\n")
+        NSLog("\(#function): 连接外设失败 \(String(describing: peripheral.name)) error：\(String(describing: error))")
         
         // 这里可以发通知出去告诉设备连接界面连接失败
     }
@@ -190,7 +193,8 @@ extension BluetoothLowEnergy: CBCentralManagerDelegate {
     func centralManager(_ central: CBCentralManager, didDisconnectPeripheral peripheral:
                             CBPeripheral, error: Error?) {
         
-        NSLog("\(#function)连接丢失\n外设：\(String(describing: peripheral.name))\n错误：\(String(describing: error))\n")
+        NSLog("\(#function): 连接丢失，\(String(describing: peripheral.name)) error：\(String(describing: error))")
+        
        // 这里可以发通知出去告诉设备连接界面连接丢失
     }
 }
