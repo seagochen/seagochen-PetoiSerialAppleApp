@@ -16,36 +16,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XEY-E7-knO">
-                                <rect key="frame" x="92" y="140" width="231" height="102"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Stop Searching Devices"/>
-                                <connections>
-                                    <action selector="stopBluetoothScanPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="AxF-kH-bu3"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i6V-QD-WYU">
-                                <rect key="frame" x="123" y="397" width="169" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Start scanning bluetooth"/>
-                                <connections>
-                                    <action selector="startBluetoothScanPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="ez8-oF-e9P"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZRY-R3-7VN">
-                                <rect key="frame" x="145" y="277" width="125" height="30"/>
+                                <rect key="frame" x="140" y="163" width="135" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Connect to device"/>
+                                <state key="normal" title="Search BLE devices"/>
                                 <connections>
-                                    <action selector="connectToDevicePressed:" destination="BYZ-38-t0r" eventType="touchDown" id="od0-0x-GG7"/>
+                                    <action selector="searchBluetoothPeripherals:" destination="BYZ-38-t0r" eventType="touchDown" id="gjj-cw-F3K"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ib-dB-d1K">
-                                <rect key="frame" x="143" y="327" width="113" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MZh-iQ-jjk">
+                                <rect key="frame" x="138" y="243" width="138" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="send c to device"/>
+                                <state key="normal" title="Connect BLE device"/>
                                 <connections>
-                                    <action selector="sendCmdPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="R6G-tf-SZR"/>
+                                    <action selector="connectBluetoothPeripherals:" destination="BYZ-38-t0r" eventType="touchDown" id="0H9-M4-9Wh"/>
                                 </connections>
                             </button>
                         </subviews>

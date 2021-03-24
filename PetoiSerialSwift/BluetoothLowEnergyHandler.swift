@@ -118,39 +118,39 @@ extension BluetoothLowEnergy: CBCentralManagerDelegate {
      
         switch central.state {
         case .poweredOn:
-            NSLog("BLE poweredOn")
+            print("BLE poweredOn")
         case .poweredOff:
-            NSLog("BLE powered off")
+            print("BLE powered off")
         case .unknown:
-            NSLog("BLE unknown")
+            print("BLE unknown")
         case .resetting:
-            NSLog("BLE ressetting")
+            print("BLE ressetting")
         case .unsupported:
-            NSLog("BLE unsupported")
+            print("BLE unsupported")
         case .unauthorized:
-            NSLog("BLE unauthorized")
+            print("BLE unauthorized")
         @unknown default:
-            NSLog("BLE default")
+            print("BLE default")
         }
     }
     
     // MARK: 以ANCS协议请求的端，授权状态发生改变
     func centralManager(_ central: CBCentralManager, didUpdateANCSAuthorizationFor peripheral: CBPeripheral) {
-//        NSLog("\(#file) \(#line) \(#function)\n central:\(central)\n peripheral:\(peripheral)")
+//        print("\(#file) \(#line) \(#function)\n central:\(central)\n peripheral:\(peripheral)")
         
         // TODO
     }
     
     // MARK: 状态的保存或者恢复
     func centralManager(_ central: CBCentralManager, willRestoreState dict: [String : Any]) {
-//        NSLog("\(#file) \(#line) \(#function)\n central:\(central)\n peripheral:\(dict)")
+//        print("\(#file) \(#line) \(#function)\n central:\(central)\n peripheral:\(dict)")
         
         // TODO
     }
     
     // MARK:
     func centralManager(_ central: CBCentralManager, connectionEventDidOccur event: CBConnectionEvent, for peripheral: CBPeripheral) {
-//        NSLog("\(#file) \(#line) \(#function)\n central:\(central)\n  peripheral:\(peripheral)")
+//        print("\(#file) \(#line) \(#function)\n central:\(central)\n  peripheral:\(peripheral)")
         
         // TODO
     }
@@ -159,7 +159,7 @@ extension BluetoothLowEnergy: CBCentralManagerDelegate {
     // MARK: 中心管理器扫描到了设备
     func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
         
-//        NSLog("\(#file) \(#line) \(#function)\n central:\(central)\n peripheral:\(peripheral)")
+//        print("\(#file) \(#line) \(#function)\n central:\(central)\n peripheral:\(peripheral)")
         
         guard !deviceList.contains(peripheral), let deviceName = peripheral.name, deviceName.count > 0 else {
             return
@@ -173,7 +173,7 @@ extension BluetoothLowEnergy: CBCentralManagerDelegate {
        
     // MARK: 连接外设成功，开始发现服务
     func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {
-//        NSLog("\(#file) \(#line) \(#function)\n central:\(central)\n peripheral:\(peripheral)")
+//        print("\(#file) \(#line) \(#function)\n central:\(central)\n peripheral:\(peripheral)")
         
          // 设置代理
          peripheral.delegate = self
@@ -186,7 +186,7 @@ extension BluetoothLowEnergy: CBCentralManagerDelegate {
     // MARK: 连接外设失败
     func centralManager(_ central: CBCentralManager, didFailToConnect peripheral:
                             CBPeripheral, error: Error?) {
-//        NSLog("\(#file) \(#line) \(#function)\n central:\(central)\n peripheral:\(String(describing: peripheral.name))\n error:\(String(describing: error))")
+//        print("\(#file) \(#line) \(#function)\n central:\(central)\n peripheral:\(String(describing: peripheral.name))\n error:\(String(describing: error))")
         
         // TODO
     }
@@ -194,7 +194,7 @@ extension BluetoothLowEnergy: CBCentralManagerDelegate {
     // MARK: 连接丢失
     func centralManager(_ central: CBCentralManager, didDisconnectPeripheral peripheral: CBPeripheral, error: Error?) {
         
-//        NSLog("\(#file) \(#line) \(#function)\n central:\(central)\n peripheral:\(String(describing: peripheral.name))\n  error：\(String(describing: error))")
+//        print("\(#file) \(#line) \(#function)\n central:\(central)\n peripheral:\(String(describing: peripheral.name))\n  error：\(String(describing: error))")
         
        // TODO
     }
@@ -209,11 +209,11 @@ extension BluetoothLowEnergy: CBPeripheralDelegate {
                     didDiscoverServices error: Error?) {
         
         if error != nil { // failed
-//            NSLog("\(#file) \(#line) \(#function)\n peripheral:\(String(describing: peripheral.name))\n error:\(String(describing: error))")
+//            print("\(#file) \(#line) \(#function)\n peripheral:\(String(describing: peripheral.name))\n error:\(String(describing: error))")
             return
         }
 
-//        NSLog("\(#file) \(#line) \(#function)\n peripheral:\(String(describing: peripheral.name))")
+//        print("\(#file) \(#line) \(#function)\n peripheral:\(String(describing: peripheral.name))")
         
         
         for service in peripheral.services ?? [] {
@@ -228,11 +228,11 @@ extension BluetoothLowEnergy: CBPeripheralDelegate {
                         CBService, error: Error?) {
         
         if error != nil { // failed
-//            NSLog("\(#file) \(#line) \(#function)\n peripheral:\(String(describing: peripheral.name))\n service:\(String(describing: service))\n error:\(String(describing: error))")
+//            print("\(#file) \(#line) \(#function)\n peripheral:\(String(describing: peripheral.name))\n service:\(String(describing: service))\n error:\(String(describing: error))")
             return
         }
         
-//        NSLog("\(#file) \(#line) \(#function)\n peripheral:\(String(describing: peripheral.name))\n service:\(String(describing: service))")
+//        print("\(#file) \(#line) \(#function)\n peripheral:\(String(describing: peripheral.name))\n service:\(String(describing: service))")
           
         for characteristic in service.characteristics ?? [] {
             uuids.append(characteristic)
@@ -245,11 +245,11 @@ extension BluetoothLowEnergy: CBPeripheralDelegate {
     func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
         
         if error != nil {
-//            NSLog("\(#file) \(#line) \(#function)\n peripheral:\(String(describing: peripheral.name))\n characteristic:\(String(describing: characteristic.description))\n error:\(String(describing: error))")
+//            print("\(#file) \(#line) \(#function)\n peripheral:\(String(describing: peripheral.name))\n characteristic:\(String(describing: characteristic.description))\n error:\(String(describing: error))")
             return
         }
         
-//        NSLog("\(#file) \(#line) \(#function)\n peripheral:\(String(describing: peripheral.name))\n characteristic:\(String(describing: characteristic.description))")
+//        print("\(#file) \(#line) \(#function)\n peripheral:\(String(describing: peripheral.name))\n characteristic:\(String(describing: characteristic.description))")
         
         if let data = characteristic.value {
             self.peripheralData = data
@@ -258,8 +258,8 @@ extension BluetoothLowEnergy: CBPeripheralDelegate {
     
     //MARK: 检测中心向外设写数据是否成功
     func peripheral(_ peripheral: CBPeripheral, didWriteValueFor characteristic: CBCharacteristic, error: Error?) {
-        if let error = error {
-//            NSLog("\(#file) \(#line) \(#function)\n peripheral:\(String(describing: peripheral.name))\n characteristic:\(String(describing: characteristic.description))\n error:\(String(describing: error))")
+        if error != nil {
+//            print("\(#file) \(#line) \(#function)\n peripheral:\(String(describing: peripheral.name))\n characteristic:\(String(describing: characteristic.description))\n error:\(String(describing: error))")
         }
         
         // TODO
