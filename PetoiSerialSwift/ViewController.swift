@@ -10,6 +10,7 @@ import CoreBluetooth
 
 
 class ViewController: UIViewController {
+    
     var bluetooth: BluetoothLowEnergy!
     
     override func viewDidLoad() {
@@ -17,8 +18,6 @@ class ViewController: UIViewController {
 
         // 初始化蓝牙
         bluetooth = BluetoothLowEnergy()
-        
-   
     }
     
     @IBAction func stopBluetoothScanPressed(_ sender: Any) {
@@ -43,5 +42,30 @@ class ViewController: UIViewController {
         // 搜索蓝牙
         bluetooth.startScanPeripheral(serviceUUIDS: nil, options: nil)
     }
+    
+    @IBAction func connectToDevicePressed(_ sender: Any) {
+        
+        // 获取已经连结的蓝牙设备
+        let deviceList = bluetooth.getPeripheralList()
+        if !deviceList.isEmpty {
+            for device in deviceList {
+                if device.name == "DeOrlandoiPhone11" {
+//                if device.name == "JDY-23A-BLE" {
+                    
+                    // connect to device
+                    bluetooth.connect(peripheral: device)
+                    break
+                }
+            }
+        }
+    }
+    
+    @IBAction func sendCmdPressed(_ sender: Any) {
+        if bluetooth.isConnected() {
+//            NSLog("\(bluetooth.writeChar?.description) \(bluetooth.peripheral.description)")
+            bluetooth.disconnect()
+        }
+    }
+    
     
 }

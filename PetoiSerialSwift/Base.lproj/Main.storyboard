@@ -32,6 +32,22 @@
                                     <action selector="startBluetoothScanPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="ez8-oF-e9P"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZRY-R3-7VN">
+                                <rect key="frame" x="145" y="277" width="125" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Connect to device"/>
+                                <connections>
+                                    <action selector="connectToDevicePressed:" destination="BYZ-38-t0r" eventType="touchDown" id="od0-0x-GG7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ib-dB-d1K">
+                                <rect key="frame" x="143" y="327" width="113" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="send c to device"/>
+                                <connections>
+                                    <action selector="sendCmdPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="R6G-tf-SZR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>

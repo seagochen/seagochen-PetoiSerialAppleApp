@@ -14,10 +14,10 @@
             filePath = "PetoiSerialSwift/BluetoothLowEnergyHandler.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "220"
-            endingLineNumber = "220"
-            landmarkName = "BluetoothLowEnergy"
-            landmarkType = "21">
+            startingLineNumber = "200"
+            endingLineNumber = "200"
+            landmarkName = "centralManager(_:didDisconnectPeripheral:error:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
