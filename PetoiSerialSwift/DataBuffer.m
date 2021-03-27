@@ -164,8 +164,28 @@
 };
 
 
+- (BOOL)isString: (NSData*)data
+{
+    // nil ptr
+    if (data == nil) return false;
+    
+    // empty bytes
+    if ([data length] < 0) return false;
+    
+    NSInteger len = 0;
+    unsigned char* bytes = [Converter cvtDataToCBytes:data length: &len];
+    for (int i = 0; i < len; i++) {
+        if (bytes[i] < 9 || bytes[i] >= 127) return false;
+    }
+    
+    return true;
+}
+
+
 - (void)appendData: (NSData*)data
 {
+    if (! [self isString:data]) return;
+    
     // 将数据写入缓冲
     [self writeToBuffer:data];
     
@@ -197,6 +217,24 @@
     }
     
     return nil;
+};
+
+
++ (void)print: (NSData*)data
+{
+    if ([data length] > 0) {
+        NSInteger len = 0;
+        unsigned char* buf = [Converter cvtDataToCBytes:data length:&len];
+        
+        for (int i = 0; i < len; i++) {
+            if (buf[i] >= 32 && buf[i] < 127) {
+                printf("%c ", buf[i]);
+            } else {
+                printf("%d ", buf[i]);
+            }
+        }
+        printf("\n");
+    }
 };
 
 @end

@@ -23,6 +23,9 @@ class BluetoothLowEnergy: NSObject {
     // 接收到的数据
     var peripheralData: Data?
     
+    // Objective Databuffer
+    var buffer: DataBuffer!
+    
     
     // MARK: 0. 初始化
     override init() {
@@ -35,6 +38,9 @@ class BluetoothLowEnergy: NSObject {
         
         // 初始化设备列表
         self.deviceList = []
+        
+        // 创建DataBuffer
+        buffer = DataBuffer.init()
     }
 
     // MARK: 1. 扫描设备
@@ -102,7 +108,12 @@ class BluetoothLowEnergy: NSObject {
 
     // MARK: 5.2. 接收数据
     func recvData() -> Data {
-        return peripheralData ?? Data([0x00])
+        let data = buffer.tryGetToken()
+        guard let d = data else {
+            return Data()
+        }
+        
+        return d
     }
     
     // MARK: 6. 断开连结
@@ -252,7 +263,7 @@ extension BluetoothLowEnergy: CBPeripheralDelegate {
 //        print("\(#file) \(#line) \(#function)\n peripheral:\(String(describing: peripheral.name))\n characteristic:\(String(describing: characteristic.description))")
         
         if let data = characteristic.value {
-            self.peripheralData = data
+            self.buffer.append(data)
         }
     }
     

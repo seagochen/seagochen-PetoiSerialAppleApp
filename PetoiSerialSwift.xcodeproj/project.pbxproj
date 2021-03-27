@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		559C1376260B53C800BD588E /* Converter.m in Sources */ = {isa = PBXBuildFile; fileRef = 559C1375260B53C800BD588E /* Converter.m */; };
+		55CCA9A6260F1769002BCABD /* DataBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 55CCA9A5260F1769002BCABD /* DataBuffer.m */; };
 		55D2455D2609A60A00EE5FE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D2455C2609A60A00EE5FE6 /* AppDelegate.swift */; };
 		55D2455F2609A60A00EE5FE6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D2455E2609A60A00EE5FE6 /* SceneDelegate.swift */; };
 		55D245612609A60A00EE5FE6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D245602609A60A00EE5FE6 /* ViewController.swift */; };
@@ -40,6 +41,8 @@
 		559C1374260B53C800BD588E /* PetoiSerialSwift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PetoiSerialSwift-Bridging-Header.h"; sourceTree = "<group>"; };
 		559C1375260B53C800BD588E /* Converter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Converter.m; sourceTree = "<group>"; };
 		559C137A260B53DA00BD588E /* Converter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Converter.h; sourceTree = "<group>"; };
+		55CCA9A4260F1769002BCABD /* DataBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataBuffer.h; sourceTree = "<group>"; };
+		55CCA9A5260F1769002BCABD /* DataBuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataBuffer.m; sourceTree = "<group>"; };
 		55D245592609A60A00EE5FE6 /* PetoiSerialSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PetoiSerialSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55D2455C2609A60A00EE5FE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55D2455E2609A60A00EE5FE6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +109,8 @@
 		55D2455B2609A60A00EE5FE6 /* PetoiSerialSwift */ = {
 			isa = PBXGroup;
 			children = (
+				55CCA9A4260F1769002BCABD /* DataBuffer.h */,
+				55CCA9A5260F1769002BCABD /* DataBuffer.m */,
 				559C137A260B53DA00BD588E /* Converter.h */,
 				559C1375260B53C800BD588E /* Converter.m */,
 				55D2455C2609A60A00EE5FE6 /* AppDelegate.swift */,
@@ -274,6 +279,7 @@
 				55D2455D2609A60A00EE5FE6 /* AppDelegate.swift in Sources */,
 				55D245902609A66100EE5FE6 /* BluetoothLowEnergyHandler.swift in Sources */,
 				55D2455F2609A60A00EE5FE6 /* SceneDelegate.swift in Sources */,
+				55CCA9A6260F1769002BCABD /* DataBuffer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

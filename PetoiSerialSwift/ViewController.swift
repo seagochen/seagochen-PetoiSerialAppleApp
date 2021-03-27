@@ -51,11 +51,13 @@ class ViewController: UIViewController {
 
     // 3.定时操作
     @objc func updataSecond() {
+        print("fired")
+        
         let data = bluetooth.recvData()
-        let feedback = String(data: data, encoding: .utf8)
-
-        if !(feedback?.isEmpty ?? false) {
-            print(feedback)
+        if data.count > 0 {
+            if let feedback = String(data: data, encoding: .utf8) {
+                print("------->", feedback)
+            }
         }
     }
 

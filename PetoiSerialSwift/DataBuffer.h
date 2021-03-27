@@ -28,6 +28,8 @@
 
 - (NSData*)tryGetToken;
 
++ (void)print: (NSData*)data;
+
 @end
 
 
