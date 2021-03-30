@@ -67,7 +67,7 @@ class BluetoothLowEnergy: NSObject {
     // MARK: 4.1. 连结设备
     // 连接设备之前要先设置代理，正常情况，当第一次获取外设peripheral的时候就会同时设置代理
     func connect(peripheral: CBPeripheral) {
-        if (peripheral.state != CBPeripheralState.connected) {
+        if (peripheral.state != .connected) {
             central?.connect(peripheral , options: nil)
             
             // 将外接设备的回掉函数连结到self
@@ -78,7 +78,7 @@ class BluetoothLowEnergy: NSObject {
     
     // MARK: 4.2. 检测是否建立了连结
     func isConnected(peripheral: CBPeripheral) -> Bool {
-        return peripheral.state == CBPeripheralState.connected
+        return peripheral.state == .connected
     }
     
     // MARK: 4.3. 获取到当前蓝牙设备可用的消息信道
@@ -147,21 +147,15 @@ extension BluetoothLowEnergy: CBCentralManagerDelegate {
     
     // MARK: 以ANCS协议请求的端，授权状态发生改变
     func centralManager(_ central: CBCentralManager, didUpdateANCSAuthorizationFor peripheral: CBPeripheral) {
-//        print("\(#file) \(#line) \(#function)\n central:\(central)\n peripheral:\(peripheral)")
-        
-        // TODO
-    }
-    
-    // MARK: 状态的保存或者恢复
-    func centralManager(_ central: CBCentralManager, willRestoreState dict: [String : Any]) {
-//        print("\(#file) \(#line) \(#function)\n central:\(central)\n peripheral:\(dict)")
+//        print("\(#function)\n central:\(central)\n peripheral:\(peripheral)")
         
         // TODO
     }
     
     // MARK:
     func centralManager(_ central: CBCentralManager, connectionEventDidOccur event: CBConnectionEvent, for peripheral: CBPeripheral) {
-//        print("\(#file) \(#line) \(#function)\n central:\(central)\n  peripheral:\(peripheral)")
+        
+//        print("\(#function)\n central:\(central)\n event: \(event)\n  peripheral:\(peripheral)")
         
         // TODO
     }
@@ -170,21 +164,18 @@ extension BluetoothLowEnergy: CBCentralManagerDelegate {
     // MARK: 中心管理器扫描到了设备
     func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
         
-//        print("\(#file) \(#line) \(#function)\n central:\(central)\n peripheral:\(peripheral)")
-        
         guard !deviceList.contains(peripheral), let deviceName = peripheral.name, deviceName.count > 0 else {
             return
         }
         
         // 把设备加入到列表中
         deviceList.append(peripheral)
-        
-        // TODO
     }
        
     // MARK: 连接外设成功，开始发现服务
     func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {
-//        print("\(#file) \(#line) \(#function)\n central:\(central)\n peripheral:\(peripheral)")
+        
+//        print("\(#function)\n central:\(central)\n peripheral:\(peripheral)")
         
          // 设置代理
          peripheral.delegate = self
@@ -197,7 +188,7 @@ extension BluetoothLowEnergy: CBCentralManagerDelegate {
     // MARK: 连接外设失败
     func centralManager(_ central: CBCentralManager, didFailToConnect peripheral:
                             CBPeripheral, error: Error?) {
-//        print("\(#file) \(#line) \(#function)\n central:\(central)\n peripheral:\(String(describing: peripheral.name))\n error:\(String(describing: error))")
+//        print("\(#function)\n central:\(central)\n peripheral:\(peripheral)\n error:\(String(describing: error))")
         
         // TODO
     }
@@ -205,7 +196,7 @@ extension BluetoothLowEnergy: CBCentralManagerDelegate {
     // MARK: 连接丢失
     func centralManager(_ central: CBCentralManager, didDisconnectPeripheral peripheral: CBPeripheral, error: Error?) {
         
-//        print("\(#file) \(#line) \(#function)\n central:\(central)\n peripheral:\(String(describing: peripheral.name))\n  error：\(String(describing: error))")
+//        print("\(#function)\n central:\(central)\n peripheral:\(peripheral)\n error:\(String(describing: error))")
         
        // TODO
     }
@@ -220,12 +211,9 @@ extension BluetoothLowEnergy: CBPeripheralDelegate {
                     didDiscoverServices error: Error?) {
         
         if error != nil { // failed
-//            print("\(#file) \(#line) \(#function)\n peripheral:\(String(describing: peripheral.name))\n error:\(String(describing: error))")
+//            print("\(#function)\n peripheral:\(String(describing: peripheral.name))\n error:\(String(describing: error))")
             return
         }
-
-//        print("\(#file) \(#line) \(#function)\n peripheral:\(String(describing: peripheral.name))")
-        
         
         for service in peripheral.services ?? [] {
             peripheral.discoverCharacteristics(nil, for: service)
@@ -239,11 +227,11 @@ extension BluetoothLowEnergy: CBPeripheralDelegate {
                         CBService, error: Error?) {
         
         if error != nil { // failed
-//            print("\(#file) \(#line) \(#function)\n peripheral:\(String(describing: peripheral.name))\n service:\(String(describing: service))\n error:\(String(describing: error))")
+//            print("\(#function)\n peripheral:\(String(describing: peripheral.name))\n service:\(String(describing: service))\n error:\(String(describing: error))")
             return
         }
         
-//        print("\(#file) \(#line) \(#function)\n peripheral:\(String(describing: peripheral.name))\n service:\(String(describing: service))")
+//        print("\(#function)\n peripheral:\(String(describing: peripheral.name))\n service:\(String(describing: service))")
           
         for characteristic in service.characteristics ?? [] {
             uuids.append(characteristic)
@@ -256,11 +244,11 @@ extension BluetoothLowEnergy: CBPeripheralDelegate {
     func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
         
         if error != nil {
-//            print("\(#file) \(#line) \(#function)\n peripheral:\(String(describing: peripheral.name))\n characteristic:\(String(describing: characteristic.description))\n error:\(String(describing: error))")
+//            print("\(#function)\n peripheral:\(String(describing: peripheral.name))\n characteristic:\(String(describing: characteristic.description))\n error:\(String(describing: error))")
             return
         }
         
-//        print("\(#file) \(#line) \(#function)\n peripheral:\(String(describing: peripheral.name))\n characteristic:\(String(describing: characteristic.description))")
+//        print("\(#function)\n peripheral:\(String(describing: peripheral.name))\n characteristic:\(String(describing: characteristic.description))")
         
         if let data = characteristic.value {
             self.buffer.append(data)
@@ -270,7 +258,8 @@ extension BluetoothLowEnergy: CBPeripheralDelegate {
     //MARK: 检测中心向外设写数据是否成功
     func peripheral(_ peripheral: CBPeripheral, didWriteValueFor characteristic: CBCharacteristic, error: Error?) {
         if error != nil {
-//            print("\(#file) \(#line) \(#function)\n peripheral:\(String(describing: peripheral.name))\n characteristic:\(String(describing: characteristic.description))\n error:\(String(describing: error))")
+//            print("\(#function)\n peripheral:\(String(describing: peripheral.name))\n characteristic:\(String(describing: characteristic.description))\n error:\(String(describing: error))")
+            return
         }
         
         // TODO
