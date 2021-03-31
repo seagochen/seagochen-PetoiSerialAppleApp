@@ -78,7 +78,7 @@
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="searchBtnPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="esU-Df-xcW"/>
+                                    <action selector="connectBtnPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="8LF-he-EMv"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yjd-uY-6M8">
