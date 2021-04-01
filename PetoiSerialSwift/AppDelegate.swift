@@ -13,7 +13,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     
     // 蓝牙设备管理类
-    var bluetooth: BluetoothLowEnergy!
+    var bluetooth: BLEPeripheralHandler!
     
     // 蓝牙BLE设备
     var peripheral: CBPeripheral?
@@ -35,7 +35,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         // 初始化蓝牙
-        bluetooth = BluetoothLowEnergy()
+        bluetooth = BLEPeripheralHandler()
         
         // 初始化信道
         bleMsgHandler = BLEMessageDetector()

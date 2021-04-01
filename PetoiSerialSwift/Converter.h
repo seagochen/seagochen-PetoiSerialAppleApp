@@ -33,9 +33,6 @@
 // MARK:　convert nsdata to c byte array
 + (unsigned char*)cvtDataToCBytes: (NSData*) data length: (NSInteger*) length_out;
 
-// MARK: 测试使用，把bytes打印成数值的方法
-+ (void)print: (NSData*)data;
-
 @end
 
 

@@ -9,7 +9,7 @@ import Foundation
 import CoreBluetooth
 
 
-class BluetoothLowEnergy: NSObject {
+class BLEPeripheralHandler: NSObject {
     
     // 一个蓝牙设备当中可能包含多个信道，一个UUID就是一个信道标记
     var uuids: [CBCharacteristic] = []
@@ -117,7 +117,7 @@ class BluetoothLowEnergy: NSObject {
     }
 }
 
-extension BluetoothLowEnergy: CBCentralManagerDelegate {
+extension BLEPeripheralHandler: CBCentralManagerDelegate {
     
     // MARK: 检查运行这个App的设备是不是支持BLE。
     func centralManagerDidUpdateState(_ central: CBCentralManager) {
@@ -199,7 +199,7 @@ extension BluetoothLowEnergy: CBCentralManagerDelegate {
 
 
 // MARK: 外置设备被绑定后的事件响应
-extension BluetoothLowEnergy: CBPeripheralDelegate {
+extension BLEPeripheralHandler: CBPeripheralDelegate {
     
     // MARK: 匹配对应服务UUID
     func peripheral(_ peripheral: CBPeripheral,

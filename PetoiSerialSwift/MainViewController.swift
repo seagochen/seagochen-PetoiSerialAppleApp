@@ -13,7 +13,7 @@ import ActionSheetPicker_3_0
 
 class MainViewController: UIViewController  {
     
-    var bluetooth: BluetoothLowEnergy!  // 蓝牙设备管理类
+    var bluetooth: BLEPeripheralHandler!  // 蓝牙设备管理类
     var peripheral: CBPeripheral?  // 蓝牙BLE设备
     var txdChar: CBCharacteristic?  // 发送数据接口
     var rxdChar: CBCharacteristic?  // 接收数据接口
