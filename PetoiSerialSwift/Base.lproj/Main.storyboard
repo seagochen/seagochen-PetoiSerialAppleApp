@@ -129,22 +129,11 @@
                                 <rect key="frame" x="20" y="650" width="100" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="AccentColor"/>
-                                <state key="normal" title="Servo">
-                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="servoSelectBtnPressed:" destination="XVh-FX-yVz" eventType="touchUpInside" id="uGT-OQ-BGD"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oR9-yy-abZ">
-                                <rect key="frame" x="157" y="650" width="100" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" name="AccentColor"/>
                                 <state key="normal" title="Calibration">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="calibrationBtnPressed:" destination="XVh-FX-yVz" eventType="touchUpInside" id="iHx-7h-mRn"/>
+                                    <action selector="servoCalibrationBtnPressed:" destination="XVh-FX-yVz" eventType="touchUpInside" id="uGT-OQ-BGD"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BittleImg" translatesAutoresizingMaskIntoConstraints="NO" id="imR-nb-isn">
@@ -166,7 +155,7 @@
                                 </connections>
                             </stepper>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p2Q-kr-F0Z">
-                                <rect key="frame" x="20" y="721" width="100" height="45"/>
+                                <rect key="frame" x="294" y="650" width="100" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <state key="normal" title="Save">
@@ -186,7 +175,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A4A-OR-XEA">
-                                <rect key="frame" x="294" y="650" width="100" height="45"/>
+                                <rect key="frame" x="157" y="650" width="100" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <state key="normal" title="Reset">
@@ -203,7 +192,6 @@
                     <navigationItem key="navigationItem" id="zYB-ey-9Lq"/>
                     <connections>
                         <outlet property="OKBtn" destination="EmB-iW-8fK" id="ofW-yf-JEO"/>
-                        <outlet property="clearBtn" destination="oR9-yy-abZ" id="w37-On-zBj"/>
                         <outlet property="finStepper" destination="xUj-2a-4xy" id="6qS-Tm-nOT"/>
                         <outlet property="outputTextView" destination="sak-lZ-6p7" id="ZtL-Pi-hZh"/>
                         <outlet property="resetBtn" destination="A4A-OR-XEA" id="3a4-d7-pEz"/>

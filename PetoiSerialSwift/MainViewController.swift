@@ -186,8 +186,9 @@ class MainViewController: UIViewController  {
     
     // MARK: 校准
     @IBAction func calibrationBtnPressed(_ sender: Any) {
-        // 先发送一个c
-//        helper.sendCmdViaSerial(msg: "c")
+        
+        // 清空全部的消息堆栈
+        helper.clearStack()
 
         // 把蓝牙设备信息存储一下
         helper.saveBleInformation()

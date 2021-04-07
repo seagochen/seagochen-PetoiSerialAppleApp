@@ -61,6 +61,10 @@ class BLESignalStackHandler: BLECommunicationHandler {
         return ""
     }
     
+    func clearStack() {
+        tokens.removeAll()
+    }
+    
     // debug用
     func debugStack() {
         print("stack info----\(tokens.count)")

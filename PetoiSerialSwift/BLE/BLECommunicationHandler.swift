@@ -45,6 +45,7 @@ class BLECommunicationHandler:  NSObject {
         self.buffer = StringBuffer()
         self.receive = receive
         self.lastTime = Date().timeIntervalSince1970
+        self.motors = []
         
         // 对蓝牙设备进行初始化
         loadBleInformation()
@@ -105,25 +106,43 @@ class BLECommunicationHandler:  NSObject {
     }
 
 
+    // 存储当前电机的角度信息
     func loadMotorsAngleFromDelegate() -> [Int] {
         
-        // 读取电机的角度
-        for i in 0...15 {
-            motors[i] = delegate.motors[i]
+        if self.motors.count <= 0 {
+            for motor in delegate.motors {
+                self.motors.append(motor)
+            }
+        } else {
+            for i in 0...15 {
+                motors[i] = delegate.motors[i]
+            }
         }
         
         return motors
     }
 
 
+    // MARK: 读取电机的角度
     func saveMotorsAngleToDelegate(motors: [Int]) {
-       // 读取电机的角度
         for i in 0...15 {
             delegate.motors[i] = motors[i]
             self.motors[i] = motors[i]
         }
     }
     
+    
+    // MARK: 返回指定电机角度
+    func getMotorAngle(motor: Int) -> Int {
+        return self.motors[motor]
+    }
+    
+    
+    // MARK: 设定指定电机角度
+    func setMotorAngle(motor: Int, angle: Int) {
+        self.motors[motor] = angle
+    }
+
     
     // MARK: 开始搜索，查找附近可用蓝牙设备
     func startScanPeripherals() {

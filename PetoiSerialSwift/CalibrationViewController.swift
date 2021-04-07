@@ -16,7 +16,6 @@ class CalibrationViewController: UIViewController {
     
     @IBOutlet weak var servoLabel: UILabel!
     @IBOutlet weak var servoBtn: UIButton!
-    @IBOutlet weak var clearBtn: UIButton!
     @IBOutlet weak var saveBtn: UIButton!
     @IBOutlet weak var OKBtn: UIButton!
     @IBOutlet weak var resetBtn: UIButton!
@@ -53,9 +52,8 @@ class CalibrationViewController: UIViewController {
                 self.helper.debugStack()
             
                 // 更新文本框
-                self.outputTextView.text = "Output:\n\t" + msg
-//                let message = "Output:\n\t" + self.helper.messageFromTop()
-//                self.outputTextView.text = message
+                let message = "Output:\n\t" + self.helper.messageFromTop()
+                self.outputTextView.text = message
                 
                 // 对回传的数据进行分析检测
                 switch top.cmd {
@@ -84,7 +82,6 @@ class CalibrationViewController: UIViewController {
          * 按钮
          */
         WidgetTools.roundCorner(button: servoBtn)
-        WidgetTools.roundCorner(button: clearBtn)
         WidgetTools.roundCorner(button: saveBtn)
         WidgetTools.roundCorner(button: OKBtn)
         WidgetTools.roundCorner(button: resetBtn)
@@ -114,40 +111,69 @@ class CalibrationViewController: UIViewController {
     
     // MARK:
     @IBAction func fineAdjStepperPressed(_ sender: UIStepper) {
-        print(sender.value)
+        
+        let angle = Int(sender.value - 10)
+        
+        if angle > 9 {
+            RMessage.showNotification(withTitle: "已达到最大调整角度", subtitle: nil, type: .normal, customTypeName: nil, duration: 3, callback: nil)
+            finStepper.value -= 1
+            
+            return
+        }
+        
+        if angle < -9 {
+            RMessage.showNotification(withTitle: "已达到最大调整角度", subtitle: nil, type: .normal, customTypeName: nil, duration: 3, callback: nil)
+            finStepper.value += 1
+            
+            return
+        }
+        
+        let fin = helper.getMotorAngle(motor: self.selectedServo) + angle
+        let cmd = "c\(self.selectedServo) \(fin)"
+        
+        // stepper 重置，这样每次传入的数据就是 1/-1
+        finStepper.value = 10
+        
+        // 修改后的角度写入存储中
+        helper.setMotorAngle(motor: self.selectedServo, angle: fin)
+        
+        // 发送命令
+        helper.sendCmdViaSerial(msg: cmd)
     }
     
     // MARK:
-    @IBAction func servoSelectBtnPressed(_ sender: Any) {
+    @IBAction func servoCalibrationBtnPressed(_ sender: UIButton) {
         
-        // 舵机编号
-        let servos = [
-            "舵机 0",
-            "舵机 8", "舵机 9", "舵机 10", "舵机 11",
-            "舵机 12", "舵机 13", "舵机 14", "舵机 15"]
-        
-        // 弹出选择框
-        ActionSheetStringPicker.show(withTitle: "可调舵机", rows: servos, initialSelection: 0, doneBlock: { picker, indexes, values in
+        if sender.currentTitle == "Calibration" {
             
-            // 显示选择的内容
-            self.servoLabel.text = "Servo: " + servos[indexes]
+            helper.sendCmdViaSerial(msg: "c")
+            sender.setTitle("servos", for: .normal)
             
-            // 更新选择的舵机号
-            if (indexes > 0) {
-                self.selectedServo = indexes + 7 // etc: 1 + 7 = servo 8
-            } else {
-                self.selectedServo = 0
-            }
-                                        
-            // 更新标签
-            self.servoLabel.text = "Servo: \(self.selectedServo)"
+        } else {
+            // 舵机编号
+            let servos = [
+                "舵机 0",
+                "舵机 8", "舵机 9", "舵机 10", "舵机 11",
+                "舵机 12", "舵机 13", "舵机 14", "舵机 15"]
+            
+            // 弹出选择框
+            ActionSheetStringPicker.show(withTitle: "可调舵机", rows: servos, initialSelection: 0, doneBlock: { picker, indexes, values in
+                
+                // 显示选择的内容
+                self.servoLabel.text = "Servo: " + servos[indexes]
+                
+                // 更新选择的舵机号
+                if (indexes > 0) {
+                    self.selectedServo = indexes + 7 // etc: 1 + 7 = servo 8
+                } else {
+                    self.selectedServo = 0
+                }
+                                            
+                // 更新标签
+                self.servoLabel.text = "Servo: \(self.selectedServo)"
 
-           return}, cancel: { ActionMultipleStringCancelBlock in return }, origin: sender)
-    }
-    
-    // MARK:
-    @IBAction func calibrationBtnPressed(_ sender: Any) {
-        helper.sendCmdViaSerial(msg: "c")
+               return}, cancel: { ActionMultipleStringCancelBlock in return }, origin: sender)
+        }
     }
     
     // MARK:
