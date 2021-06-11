@@ -1,0 +1,841 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4E70C70DD97C42E78D3A1271 /* Pods_PetoiControllerSwift_PetoiControllerSwiftUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98BAB4012AF2E91F265DE1A0 /* Pods_PetoiControllerSwift_PetoiControllerSwiftUITests.framework */; };
+		550FE813261192A300E81E5A /* BLEMessageDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550FE812261192A300E81E5A /* BLEMessageDetector.swift */; };
+		5510BB85261423B5000FE472 /* ColorConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5510BB84261423B5000FE472 /* ColorConverter.swift */; };
+		5510BB90261448B7000FE472 /* CalibrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5510BB8F261448B7000FE472 /* CalibrationViewController.swift */; };
+		5510BB982614499D000FE472 /* ViewJumper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5510BB972614499D000FE472 /* ViewJumper.swift */; };
+		552B974B2615C35700352ABA /* BLECommunicationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552B974A2615C35700352ABA /* BLECommunicationHandler.swift */; };
+		552B9765261621DD00352ABA /* StringBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 552B9764261621DD00352ABA /* StringBuffer.m */; };
+		552B97812616FA8300352ABA /* BLESignalStackHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552B97802616FA8300352ABA /* BLESignalStackHandler.swift */; };
+		559C1376260B53C800BD588E /* Converter.m in Sources */ = {isa = PBXBuildFile; fileRef = 559C1375260B53C800BD588E /* Converter.m */; };
+		55CCA9A6260F1769002BCABD /* DataBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 55CCA9A5260F1769002BCABD /* DataBuffer.m */; };
+		55D2455D2609A60A00EE5FE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D2455C2609A60A00EE5FE6 /* AppDelegate.swift */; };
+		55D2455F2609A60A00EE5FE6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D2455E2609A60A00EE5FE6 /* SceneDelegate.swift */; };
+		55D245612609A60A00EE5FE6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D245602609A60A00EE5FE6 /* MainViewController.swift */; };
+		55D245642609A60A00EE5FE6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55D245622609A60A00EE5FE6 /* Main.storyboard */; };
+		55D245662609A60B00EE5FE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55D245652609A60B00EE5FE6 /* Assets.xcassets */; };
+		55D245692609A60B00EE5FE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55D245672609A60B00EE5FE6 /* LaunchScreen.storyboard */; };
+		55D245742609A60B00EE5FE6 /* PetoiControllerSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D245732609A60B00EE5FE6 /* PetoiControllerSwiftTests.swift */; };
+		55D2457F2609A60B00EE5FE6 /* PetoiControllerSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D2457E2609A60B00EE5FE6 /* PetoiControllerSwiftUITests.swift */; };
+		55D245902609A66100EE5FE6 /* BLEPeripheralHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D2458F2609A66100EE5FE6 /* BLEPeripheralHandler.swift */; };
+		55D518F12611A82F0011BF4F /* UILayoutHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D518F02611A82F0011BF4F /* UILayoutHandler.swift */; };
+		55D519002611CC0D0011BF4F /* WidgetTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D518FF2611CC0D0011BF4F /* WidgetTools.swift */; };
+		6A10B532CDB0EB53873886E5 /* Pods_PetoiControllerSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F2FBC426183199629D7CDE1 /* Pods_PetoiControllerSwift.framework */; };
+		D08AFB9BE2F4F16082474DEB /* Pods_PetoiControllerSwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E97F6BC2D2CADCB436742088 /* Pods_PetoiControllerSwiftTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		55D245702609A60B00EE5FE6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 55D245512609A60A00EE5FE6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 55D245582609A60A00EE5FE6;
+			remoteInfo = PetoiControllerSwift;
+		};
+		55D2457B2609A60B00EE5FE6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 55D245512609A60A00EE5FE6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 55D245582609A60A00EE5FE6;
+			remoteInfo = PetoiControllerSwift;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		201C351B5D041618AE6DD58E /* Pods-PetoiControllerSwift-PetoiControllerSwiftUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetoiControllerSwift-PetoiControllerSwiftUITests.debug.xcconfig"; path = "Target Support Files/Pods-PetoiControllerSwift-PetoiControllerSwiftUITests/Pods-PetoiControllerSwift-PetoiControllerSwiftUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		2F2FBC426183199629D7CDE1 /* Pods_PetoiControllerSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PetoiControllerSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		550FE812261192A300E81E5A /* BLEMessageDetector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEMessageDetector.swift; sourceTree = "<group>"; };
+		5510BB84261423B5000FE472 /* ColorConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorConverter.swift; sourceTree = "<group>"; };
+		5510BB8F261448B7000FE472 /* CalibrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalibrationViewController.swift; sourceTree = "<group>"; };
+		5510BB972614499D000FE472 /* ViewJumper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewJumper.swift; sourceTree = "<group>"; };
+		552B974A2615C35700352ABA /* BLECommunicationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLECommunicationHandler.swift; sourceTree = "<group>"; };
+		552B9763261621CD00352ABA /* StringBuffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StringBuffer.h; sourceTree = "<group>"; };
+		552B9764261621DD00352ABA /* StringBuffer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StringBuffer.m; sourceTree = "<group>"; };
+		552B97802616FA8300352ABA /* BLESignalStackHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLESignalStackHandler.swift; sourceTree = "<group>"; };
+		559C1374260B53C800BD588E /* PetoiControllerSwift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PetoiControllerSwift-Bridging-Header.h"; sourceTree = "<group>"; };
+		559C1375260B53C800BD588E /* Converter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Converter.m; sourceTree = "<group>"; };
+		559C137A260B53DA00BD588E /* Converter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Converter.h; sourceTree = "<group>"; };
+		55CCA9A4260F1769002BCABD /* DataBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataBuffer.h; sourceTree = "<group>"; };
+		55CCA9A5260F1769002BCABD /* DataBuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataBuffer.m; sourceTree = "<group>"; };
+		55D245592609A60A00EE5FE6 /* PetoiControllerSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PetoiControllerSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		55D2455C2609A60A00EE5FE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		55D2455E2609A60A00EE5FE6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		55D245602609A60A00EE5FE6 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		55D245632609A60A00EE5FE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		55D245652609A60B00EE5FE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		55D245682609A60B00EE5FE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		55D2456A2609A60B00EE5FE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55D2456F2609A60B00EE5FE6 /* PetoiControllerSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PetoiControllerSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		55D245732609A60B00EE5FE6 /* PetoiControllerSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetoiControllerSwiftTests.swift; sourceTree = "<group>"; };
+		55D245752609A60B00EE5FE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55D2457A2609A60B00EE5FE6 /* PetoiControllerSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PetoiControllerSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		55D2457E2609A60B00EE5FE6 /* PetoiControllerSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetoiControllerSwiftUITests.swift; sourceTree = "<group>"; };
+		55D245802609A60B00EE5FE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55D2458F2609A66100EE5FE6 /* BLEPeripheralHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEPeripheralHandler.swift; sourceTree = "<group>"; };
+		55D518F02611A82F0011BF4F /* UILayoutHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILayoutHandler.swift; sourceTree = "<group>"; };
+		55D518FF2611CC0D0011BF4F /* WidgetTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetTools.swift; sourceTree = "<group>"; };
+		583748E9B22C1DC017ADD7CE /* Pods-PetoiControllerSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetoiControllerSwift.debug.xcconfig"; path = "Target Support Files/Pods-PetoiControllerSwift/Pods-PetoiControllerSwift.debug.xcconfig"; sourceTree = "<group>"; };
+		5EEF5B819CD5CBA31659CCE2 /* Pods-PetoiControllerSwiftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetoiControllerSwiftTests.debug.xcconfig"; path = "Target Support Files/Pods-PetoiControllerSwiftTests/Pods-PetoiControllerSwiftTests.debug.xcconfig"; sourceTree = "<group>"; };
+		69342F79F9C8633968F82BEA /* Pods-PetoiControllerSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetoiControllerSwift.release.xcconfig"; path = "Target Support Files/Pods-PetoiControllerSwift/Pods-PetoiControllerSwift.release.xcconfig"; sourceTree = "<group>"; };
+		817CDB99F74DC291F9ECF623 /* Pods-PetoiControllerSwift-PetoiControllerSwiftUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetoiControllerSwift-PetoiControllerSwiftUITests.release.xcconfig"; path = "Target Support Files/Pods-PetoiControllerSwift-PetoiControllerSwiftUITests/Pods-PetoiControllerSwift-PetoiControllerSwiftUITests.release.xcconfig"; sourceTree = "<group>"; };
+		89C82881271D0D5E03F3769C /* Pods-PetoiControllerSwiftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetoiControllerSwiftTests.release.xcconfig"; path = "Target Support Files/Pods-PetoiControllerSwiftTests/Pods-PetoiControllerSwiftTests.release.xcconfig"; sourceTree = "<group>"; };
+		98BAB4012AF2E91F265DE1A0 /* Pods_PetoiControllerSwift_PetoiControllerSwiftUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PetoiControllerSwift_PetoiControllerSwiftUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E97F6BC2D2CADCB436742088 /* Pods_PetoiControllerSwiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PetoiControllerSwiftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		55D245562609A60A00EE5FE6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A10B532CDB0EB53873886E5 /* Pods_PetoiControllerSwift.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55D2456C2609A60B00EE5FE6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D08AFB9BE2F4F16082474DEB /* Pods_PetoiControllerSwiftTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55D245772609A60B00EE5FE6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E70C70DD97C42E78D3A1271 /* Pods_PetoiControllerSwift_PetoiControllerSwiftUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		552B97522615C8E400352ABA /* BLE */ = {
+			isa = PBXGroup;
+			children = (
+				552B97802616FA8300352ABA /* BLESignalStackHandler.swift */,
+				552B974A2615C35700352ABA /* BLECommunicationHandler.swift */,
+				55D2458F2609A66100EE5FE6 /* BLEPeripheralHandler.swift */,
+				550FE812261192A300E81E5A /* BLEMessageDetector.swift */,
+				55CCA9A4260F1769002BCABD /* DataBuffer.h */,
+				55CCA9A5260F1769002BCABD /* DataBuffer.m */,
+				552B9763261621CD00352ABA /* StringBuffer.h */,
+				552B9764261621DD00352ABA /* StringBuffer.m */,
+			);
+			path = BLE;
+			sourceTree = "<group>";
+		};
+		552B97532615C90000352ABA /* Converter */ = {
+			isa = PBXGroup;
+			children = (
+				559C137A260B53DA00BD588E /* Converter.h */,
+				559C1375260B53C800BD588E /* Converter.m */,
+				5510BB84261423B5000FE472 /* ColorConverter.swift */,
+			);
+			path = Converter;
+			sourceTree = "<group>";
+		};
+		552B97542615C94600352ABA /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				5510BB972614499D000FE472 /* ViewJumper.swift */,
+				55D518FF2611CC0D0011BF4F /* WidgetTools.swift */,
+				55D518F02611A82F0011BF4F /* UILayoutHandler.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		55D245502609A60A00EE5FE6 = {
+			isa = PBXGroup;
+			children = (
+				55D2455B2609A60A00EE5FE6 /* PetoiControllerSwift */,
+				55D245722609A60B00EE5FE6 /* PetoiControllerSwiftTests */,
+				55D2457D2609A60B00EE5FE6 /* PetoiControllerSwiftUITests */,
+				55D2455A2609A60A00EE5FE6 /* Products */,
+				559C1374260B53C800BD588E /* PetoiControllerSwift-Bridging-Header.h */,
+				EB4846E66A34B423A7C28A79 /* Pods */,
+				FEAB9E89B98BE4E17022D752 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		55D2455A2609A60A00EE5FE6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				55D245592609A60A00EE5FE6 /* PetoiControllerSwift.app */,
+				55D2456F2609A60B00EE5FE6 /* PetoiControllerSwiftTests.xctest */,
+				55D2457A2609A60B00EE5FE6 /* PetoiControllerSwiftUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		55D2455B2609A60A00EE5FE6 /* PetoiControllerSwift */ = {
+			isa = PBXGroup;
+			children = (
+				552B97542615C94600352ABA /* Helper */,
+				552B97532615C90000352ABA /* Converter */,
+				552B97522615C8E400352ABA /* BLE */,
+				55D2455C2609A60A00EE5FE6 /* AppDelegate.swift */,
+				55D2455E2609A60A00EE5FE6 /* SceneDelegate.swift */,
+				55D245602609A60A00EE5FE6 /* MainViewController.swift */,
+				5510BB8F261448B7000FE472 /* CalibrationViewController.swift */,
+				55D245652609A60B00EE5FE6 /* Assets.xcassets */,
+				55D245622609A60A00EE5FE6 /* Main.storyboard */,
+				55D245672609A60B00EE5FE6 /* LaunchScreen.storyboard */,
+				55D2456A2609A60B00EE5FE6 /* Info.plist */,
+			);
+			path = PetoiControllerSwift;
+			sourceTree = "<group>";
+		};
+		55D245722609A60B00EE5FE6 /* PetoiControllerSwiftTests */ = {
+			isa = PBXGroup;
+			children = (
+				55D245732609A60B00EE5FE6 /* PetoiControllerSwiftTests.swift */,
+				55D245752609A60B00EE5FE6 /* Info.plist */,
+			);
+			path = PetoiControllerSwiftTests;
+			sourceTree = "<group>";
+		};
+		55D2457D2609A60B00EE5FE6 /* PetoiControllerSwiftUITests */ = {
+			isa = PBXGroup;
+			children = (
+				55D2457E2609A60B00EE5FE6 /* PetoiControllerSwiftUITests.swift */,
+				55D245802609A60B00EE5FE6 /* Info.plist */,
+			);
+			path = PetoiControllerSwiftUITests;
+			sourceTree = "<group>";
+		};
+		EB4846E66A34B423A7C28A79 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				583748E9B22C1DC017ADD7CE /* Pods-PetoiControllerSwift.debug.xcconfig */,
+				69342F79F9C8633968F82BEA /* Pods-PetoiControllerSwift.release.xcconfig */,
+				201C351B5D041618AE6DD58E /* Pods-PetoiControllerSwift-PetoiControllerSwiftUITests.debug.xcconfig */,
+				817CDB99F74DC291F9ECF623 /* Pods-PetoiControllerSwift-PetoiControllerSwiftUITests.release.xcconfig */,
+				5EEF5B819CD5CBA31659CCE2 /* Pods-PetoiControllerSwiftTests.debug.xcconfig */,
+				89C82881271D0D5E03F3769C /* Pods-PetoiControllerSwiftTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		FEAB9E89B98BE4E17022D752 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2F2FBC426183199629D7CDE1 /* Pods_PetoiControllerSwift.framework */,
+				98BAB4012AF2E91F265DE1A0 /* Pods_PetoiControllerSwift_PetoiControllerSwiftUITests.framework */,
+				E97F6BC2D2CADCB436742088 /* Pods_PetoiControllerSwiftTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		55D245582609A60A00EE5FE6 /* PetoiControllerSwift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55D245832609A60B00EE5FE6 /* Build configuration list for PBXNativeTarget "PetoiControllerSwift" */;
+			buildPhases = (
+				701F92EE3A2A5F018AFD7430 /* [CP] Check Pods Manifest.lock */,
+				55D245552609A60A00EE5FE6 /* Sources */,
+				55D245562609A60A00EE5FE6 /* Frameworks */,
+				55D245572609A60A00EE5FE6 /* Resources */,
+				A070C6DE9EBA7A24E795EE55 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PetoiControllerSwift;
+			productName = PetoiControllerSwift;
+			productReference = 55D245592609A60A00EE5FE6 /* PetoiControllerSwift.app */;
+			productType = "com.apple.product-type.application";
+		};
+		55D2456E2609A60B00EE5FE6 /* PetoiControllerSwiftTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55D245862609A60B00EE5FE6 /* Build configuration list for PBXNativeTarget "PetoiControllerSwiftTests" */;
+			buildPhases = (
+				453359A2283511D435948088 /* [CP] Check Pods Manifest.lock */,
+				55D2456B2609A60B00EE5FE6 /* Sources */,
+				55D2456C2609A60B00EE5FE6 /* Frameworks */,
+				55D2456D2609A60B00EE5FE6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				55D245712609A60B00EE5FE6 /* PBXTargetDependency */,
+			);
+			name = PetoiControllerSwiftTests;
+			productName = PetoiControllerSwiftTests;
+			productReference = 55D2456F2609A60B00EE5FE6 /* PetoiControllerSwiftTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		55D245792609A60B00EE5FE6 /* PetoiControllerSwiftUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55D245892609A60B00EE5FE6 /* Build configuration list for PBXNativeTarget "PetoiControllerSwiftUITests" */;
+			buildPhases = (
+				BF8517BCE73792437495362E /* [CP] Check Pods Manifest.lock */,
+				55D245762609A60B00EE5FE6 /* Sources */,
+				55D245772609A60B00EE5FE6 /* Frameworks */,
+				55D245782609A60B00EE5FE6 /* Resources */,
+				BEB20553459A629D7EA84F1F /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				55D2457C2609A60B00EE5FE6 /* PBXTargetDependency */,
+			);
+			name = PetoiControllerSwiftUITests;
+			productName = PetoiControllerSwiftUITests;
+			productReference = 55D2457A2609A60B00EE5FE6 /* PetoiControllerSwiftUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		55D245512609A60A00EE5FE6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				KnownAssetTags = (
+					mainVC,
+				);
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					55D245582609A60A00EE5FE6 = {
+						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
+					};
+					55D2456E2609A60B00EE5FE6 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 55D245582609A60A00EE5FE6;
+					};
+					55D245792609A60B00EE5FE6 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 55D245582609A60A00EE5FE6;
+					};
+				};
+			};
+			buildConfigurationList = 55D245542609A60A00EE5FE6 /* Build configuration list for PBXProject "PetoiControllerSwift" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 55D245502609A60A00EE5FE6;
+			productRefGroup = 55D2455A2609A60A00EE5FE6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				55D245582609A60A00EE5FE6 /* PetoiControllerSwift */,
+				55D2456E2609A60B00EE5FE6 /* PetoiControllerSwiftTests */,
+				55D245792609A60B00EE5FE6 /* PetoiControllerSwiftUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		55D245572609A60A00EE5FE6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55D245692609A60B00EE5FE6 /* LaunchScreen.storyboard in Resources */,
+				55D245662609A60B00EE5FE6 /* Assets.xcassets in Resources */,
+				55D245642609A60A00EE5FE6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55D2456D2609A60B00EE5FE6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55D245782609A60B00EE5FE6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		453359A2283511D435948088 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PetoiControllerSwiftTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		701F92EE3A2A5F018AFD7430 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PetoiControllerSwift-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A070C6DE9EBA7A24E795EE55 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PetoiControllerSwift/Pods-PetoiControllerSwift-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PetoiControllerSwift/Pods-PetoiControllerSwift-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PetoiControllerSwift/Pods-PetoiControllerSwift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BEB20553459A629D7EA84F1F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PetoiControllerSwift-PetoiControllerSwiftUITests/Pods-PetoiControllerSwift-PetoiControllerSwiftUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PetoiControllerSwift-PetoiControllerSwiftUITests/Pods-PetoiControllerSwift-PetoiControllerSwiftUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PetoiControllerSwift-PetoiControllerSwiftUITests/Pods-PetoiControllerSwift-PetoiControllerSwiftUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BF8517BCE73792437495362E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PetoiControllerSwift-PetoiControllerSwiftUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		55D245552609A60A00EE5FE6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55D518F12611A82F0011BF4F /* UILayoutHandler.swift in Sources */,
+				559C1376260B53C800BD588E /* Converter.m in Sources */,
+				5510BB85261423B5000FE472 /* ColorConverter.swift in Sources */,
+				55D519002611CC0D0011BF4F /* WidgetTools.swift in Sources */,
+				5510BB90261448B7000FE472 /* CalibrationViewController.swift in Sources */,
+				55D245612609A60A00EE5FE6 /* MainViewController.swift in Sources */,
+				552B974B2615C35700352ABA /* BLECommunicationHandler.swift in Sources */,
+				55D2455D2609A60A00EE5FE6 /* AppDelegate.swift in Sources */,
+				552B9765261621DD00352ABA /* StringBuffer.m in Sources */,
+				55D245902609A66100EE5FE6 /* BLEPeripheralHandler.swift in Sources */,
+				550FE813261192A300E81E5A /* BLEMessageDetector.swift in Sources */,
+				5510BB982614499D000FE472 /* ViewJumper.swift in Sources */,
+				55D2455F2609A60A00EE5FE6 /* SceneDelegate.swift in Sources */,
+				55CCA9A6260F1769002BCABD /* DataBuffer.m in Sources */,
+				552B97812616FA8300352ABA /* BLESignalStackHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55D2456B2609A60B00EE5FE6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55D245742609A60B00EE5FE6 /* PetoiControllerSwiftTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55D245762609A60B00EE5FE6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55D2457F2609A60B00EE5FE6 /* PetoiControllerSwiftUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		55D245712609A60B00EE5FE6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 55D245582609A60A00EE5FE6 /* PetoiControllerSwift */;
+			targetProxy = 55D245702609A60B00EE5FE6 /* PBXContainerItemProxy */;
+		};
+		55D2457C2609A60B00EE5FE6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 55D245582609A60A00EE5FE6 /* PetoiControllerSwift */;
+			targetProxy = 55D2457B2609A60B00EE5FE6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		55D245622609A60A00EE5FE6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				55D245632609A60A00EE5FE6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		55D245672609A60B00EE5FE6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				55D245682609A60B00EE5FE6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		55D245812609A60B00EE5FE6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		55D245822609A60B00EE5FE6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		55D245842609A60B00EE5FE6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 583748E9B22C1DC017ADD7CE /* Pods-PetoiControllerSwift.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2ST5PDCUZW;
+				INFOPLIST_FILE = PetoiControllerSwift/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.seagosoft.PetoiControllerSwift;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PetoiControllerSwift-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		55D245852609A60B00EE5FE6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 69342F79F9C8633968F82BEA /* Pods-PetoiControllerSwift.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2ST5PDCUZW;
+				INFOPLIST_FILE = PetoiControllerSwift/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.seagosoft.PetoiControllerSwift;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PetoiControllerSwift-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		55D245872609A60B00EE5FE6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5EEF5B819CD5CBA31659CCE2 /* Pods-PetoiControllerSwiftTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2ST5PDCUZW;
+				INFOPLIST_FILE = PetoiControllerSwiftTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.seagosoft.PetoiControllerSwiftTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PetoiControllerSwift.app/PetoiControllerSwift";
+			};
+			name = Debug;
+		};
+		55D245882609A60B00EE5FE6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 89C82881271D0D5E03F3769C /* Pods-PetoiControllerSwiftTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2ST5PDCUZW;
+				INFOPLIST_FILE = PetoiControllerSwiftTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.seagosoft.PetoiControllerSwiftTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PetoiControllerSwift.app/PetoiControllerSwift";
+			};
+			name = Release;
+		};
+		55D2458A2609A60B00EE5FE6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 201C351B5D041618AE6DD58E /* Pods-PetoiControllerSwift-PetoiControllerSwiftUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2ST5PDCUZW;
+				INFOPLIST_FILE = PetoiControllerSwiftUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.seagosoft.PetoiControllerSwiftUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PetoiControllerSwift;
+			};
+			name = Debug;
+		};
+		55D2458B2609A60B00EE5FE6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 817CDB99F74DC291F9ECF623 /* Pods-PetoiControllerSwift-PetoiControllerSwiftUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2ST5PDCUZW;
+				INFOPLIST_FILE = PetoiControllerSwiftUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.seagosoft.PetoiControllerSwiftUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PetoiControllerSwift;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		55D245542609A60A00EE5FE6 /* Build configuration list for PBXProject "PetoiControllerSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55D245812609A60B00EE5FE6 /* Debug */,
+				55D245822609A60B00EE5FE6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		55D245832609A60B00EE5FE6 /* Build configuration list for PBXNativeTarget "PetoiControllerSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55D245842609A60B00EE5FE6 /* Debug */,
+				55D245852609A60B00EE5FE6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		55D245862609A60B00EE5FE6 /* Build configuration list for PBXNativeTarget "PetoiControllerSwiftTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55D245872609A60B00EE5FE6 /* Debug */,
+				55D245882609A60B00EE5FE6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		55D245892609A60B00EE5FE6 /* Build configuration list for PBXNativeTarget "PetoiControllerSwiftUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55D2458A2609A60B00EE5FE6 /* Debug */,
+				55D2458B2609A60B00EE5FE6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 55D245512609A60A00EE5FE6 /* Project object */;
+}
